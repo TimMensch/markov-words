@@ -1,6 +1,6 @@
 {
-    "name": "markov-words",
-    "version": "0.2.0",
+    "name": "markov-words-ts",
+    "version": "0.4.0",
     "description": "Generates pronounceable random words via Markov chains",
     "main": "out/index.js",
     "scripts": {
@@ -27,8 +27,5 @@
         "jest": "^28.1.0",
         "ts-jest": "^28.0.2",
         "typescript": "^4.6.4"
-    },
-    "dependencies": {
-        "syllable": "^5.0.0"
     }
 }
