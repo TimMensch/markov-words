@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markov words generate should generate aaa 1`] = `
+Array [
+  "aaa",
+]
+`;
+
+exports[`Markov words generate should generate aaa twice 1`] = `
+Array [
+  "aaa",
+  "aaa",
+]
+`;

@@ -1,0 +1,372 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`word-stats calculate no words 1`] = `
+Object {
+  "firstLetters": Object {
+    "total": 0,
+  },
+  "lastLetters": Object {},
+  "letters": Object {},
+  "penultimateLetters": Object {},
+  "secondLetters": Object {},
+}
+`;
+
+exports[`word-stats calculate no words 2`] = `
+Object {
+  "firstLetters": Object {
+    "total": 0,
+  },
+  "lastLetters": Object {},
+  "letters": Object {},
+  "penultimateLetters": Object {},
+  "secondLetters": Object {},
+}
+`;
+
+exports[`word-stats calculate no words long enough 1`] = `
+Object {
+  "firstLetters": Object {
+    "total": 0,
+  },
+  "lastLetters": Object {},
+  "letters": Object {},
+  "penultimateLetters": Object {},
+  "secondLetters": Object {},
+}
+`;
+
+exports[`word-stats calculate stats ["aaa"] 1`] = `
+Object {
+  "firstLetters": Object {
+    "a": 1,
+    "total": 1,
+  },
+  "lastLetters": Object {
+    "a": Object {
+      "a": 1,
+      "total": 1,
+    },
+    "aa": Object {
+      "a": 1,
+      "total": 1,
+    },
+  },
+  "letters": Object {},
+  "penultimateLetters": Object {},
+  "secondLetters": Object {
+    "a": Object {
+      "a": 1,
+      "total": 1,
+    },
+  },
+}
+`;
+
+exports[`word-stats calculate stats ["aaaa"] 1`] = `
+Object {
+  "firstLetters": Object {
+    "a": 1,
+    "total": 1,
+  },
+  "lastLetters": Object {
+    "a": Object {
+      "a": 1,
+      "total": 1,
+    },
+    "aa": Object {
+      "a": 1,
+      "total": 1,
+    },
+  },
+  "letters": Object {},
+  "penultimateLetters": Object {
+    "a": Object {
+      "a": 1,
+      "total": 1,
+    },
+    "aa": Object {
+      "a": 1,
+      "total": 1,
+    },
+  },
+  "secondLetters": Object {
+    "a": Object {
+      "a": 1,
+      "total": 1,
+    },
+  },
+}
+`;
+
+exports[`word-stats calculate stats ["aaaaa"] 1`] = `
+Object {
+  "firstLetters": Object {
+    "a": 1,
+    "total": 1,
+  },
+  "lastLetters": Object {
+    "a": Object {
+      "a": 1,
+      "total": 1,
+    },
+    "aa": Object {
+      "a": 1,
+      "total": 1,
+    },
+  },
+  "letters": Object {
+    "a": Object {
+      "a": 1,
+      "total": 1,
+    },
+    "aa": Object {
+      "a": 1,
+      "total": 1,
+    },
+  },
+  "penultimateLetters": Object {
+    "a": Object {
+      "a": 1,
+      "total": 1,
+    },
+    "aa": Object {
+      "a": 1,
+      "total": 1,
+    },
+  },
+  "secondLetters": Object {
+    "a": Object {
+      "a": 1,
+      "total": 1,
+    },
+  },
+}
+`;
+
+exports[`word-stats calculate stats ["abc"] 1`] = `
+Object {
+  "firstLetters": Object {
+    "a": 1,
+    "total": 1,
+  },
+  "lastLetters": Object {
+    "ab": Object {
+      "c": 1,
+      "total": 1,
+    },
+    "b": Object {
+      "c": 1,
+      "total": 1,
+    },
+  },
+  "letters": Object {},
+  "penultimateLetters": Object {},
+  "secondLetters": Object {
+    "a": Object {
+      "b": 1,
+      "total": 1,
+    },
+  },
+}
+`;
+
+exports[`word-stats calculate stats ["abcd"] 1`] = `
+Object {
+  "firstLetters": Object {
+    "a": 1,
+    "total": 1,
+  },
+  "lastLetters": Object {
+    "bc": Object {
+      "d": 1,
+      "total": 1,
+    },
+    "c": Object {
+      "d": 1,
+      "total": 1,
+    },
+  },
+  "letters": Object {},
+  "penultimateLetters": Object {
+    "ab": Object {
+      "c": 1,
+      "total": 1,
+    },
+    "b": Object {
+      "c": 1,
+      "total": 1,
+    },
+  },
+  "secondLetters": Object {
+    "a": Object {
+      "b": 1,
+      "total": 1,
+    },
+  },
+}
+`;
+
+exports[`word-stats calculate stats ["abcde", "abcde"] 1`] = `
+Object {
+  "firstLetters": Object {
+    "a": 2,
+    "total": 2,
+  },
+  "lastLetters": Object {
+    "cd": Object {
+      "e": 2,
+      "total": 2,
+    },
+    "d": Object {
+      "e": 2,
+      "total": 2,
+    },
+  },
+  "letters": Object {
+    "ab": Object {
+      "c": 2,
+      "total": 2,
+    },
+    "b": Object {
+      "c": 2,
+      "total": 2,
+    },
+  },
+  "penultimateLetters": Object {
+    "bc": Object {
+      "d": 2,
+      "total": 2,
+    },
+    "c": Object {
+      "d": 2,
+      "total": 2,
+    },
+  },
+  "secondLetters": Object {
+    "a": Object {
+      "b": 2,
+      "total": 2,
+    },
+  },
+}
+`;
+
+exports[`word-stats calculate stats ["abcde", "fghij"] 1`] = `
+Object {
+  "firstLetters": Object {
+    "a": 1,
+    "f": 1,
+    "total": 2,
+  },
+  "lastLetters": Object {
+    "cd": Object {
+      "e": 1,
+      "total": 1,
+    },
+    "d": Object {
+      "e": 1,
+      "total": 1,
+    },
+    "hi": Object {
+      "j": 1,
+      "total": 1,
+    },
+    "i": Object {
+      "j": 1,
+      "total": 1,
+    },
+  },
+  "letters": Object {
+    "ab": Object {
+      "c": 1,
+      "total": 1,
+    },
+    "b": Object {
+      "c": 1,
+      "total": 1,
+    },
+    "fg": Object {
+      "h": 1,
+      "total": 1,
+    },
+    "g": Object {
+      "h": 1,
+      "total": 1,
+    },
+  },
+  "penultimateLetters": Object {
+    "bc": Object {
+      "d": 1,
+      "total": 1,
+    },
+    "c": Object {
+      "d": 1,
+      "total": 1,
+    },
+    "gh": Object {
+      "i": 1,
+      "total": 1,
+    },
+    "h": Object {
+      "i": 1,
+      "total": 1,
+    },
+  },
+  "secondLetters": Object {
+    "a": Object {
+      "b": 1,
+      "total": 1,
+    },
+    "f": Object {
+      "g": 1,
+      "total": 1,
+    },
+  },
+}
+`;
+
+exports[`word-stats calculate stats ["abcde"] 1`] = `
+Object {
+  "firstLetters": Object {
+    "a": 1,
+    "total": 1,
+  },
+  "lastLetters": Object {
+    "cd": Object {
+      "e": 1,
+      "total": 1,
+    },
+    "d": Object {
+      "e": 1,
+      "total": 1,
+    },
+  },
+  "letters": Object {
+    "ab": Object {
+      "c": 1,
+      "total": 1,
+    },
+    "b": Object {
+      "c": 1,
+      "total": 1,
+    },
+  },
+  "penultimateLetters": Object {
+    "bc": Object {
+      "d": 1,
+      "total": 1,
+    },
+    "c": Object {
+      "d": 1,
+      "total": 1,
+    },
+  },
+  "secondLetters": Object {
+    "a": Object {
+      "b": 1,
+      "total": 1,
+    },
+  },
+}
+`;

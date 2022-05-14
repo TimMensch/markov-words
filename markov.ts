@@ -38,20 +38,32 @@ function createWord(stats: Stats, wordLength: number) {
     let j;
     // choose the rest of the letters except for the final two
     for (j = 2; j < wordLength - 2; j++) {
-        nextLetter = chooseLetter(stats.letters[l1 + l2] as LetterCount);
+        const midStats = (stats.letters[l1 + l2] ?? stats.letters[l2]) as LetterCount;
+        nextLetter = chooseLetter(midStats);
         currentWord += nextLetter;
         l1 = l2;
         l2 = nextLetter;
     }
     // choose the second to last letter (unless this is a 3 letter word)
+
     if (j < wordLength - 1) {
-        nextLetter = chooseLetter(stats.penultimateLetters[l1 + l2] as LetterCount);
+        const penStats = (stats.penultimateLetters[l1 + l2] ??
+            stats.penultimateLetters[l2] ??
+            stats.letters[l1 + l2] ??
+            stats.letters[l2]) as LetterCount;
+        nextLetter = chooseLetter(penStats);
         currentWord += nextLetter;
         l1 = l2;
         l2 = nextLetter;
     }
+
+    const lastStats = (stats.lastLetters[l1 + l2] ??
+        stats.lastLetters[l2] ??
+        stats.letters[l1 + l2] ??
+        stats.letters[l2]) as LetterCount;
+
     // return what we've got plus the final letter
-    return currentWord + chooseLetter(stats.lastLetters[l1 + l2] as LetterCount);
+    return currentWord + chooseLetter(lastStats);
 }
 
 // entry point to generate the Markov word(s). wordLength must be at least 3,

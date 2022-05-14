@@ -29,7 +29,7 @@ export function incorporateWord(stats: Stats, word: string) {
     countLetter(stats.firstLetters, l1);
 
     // second letter stats, relative to first letter
-    const l2 = word.charAt(1);
+    let l2 = word.charAt(1);
     let totals = stats.secondLetters[l1];
     if (!totals) {
         stats.secondLetters[l1] = totals = { total: 0 };
@@ -39,25 +39,40 @@ export function incorporateWord(stats: Stats, word: string) {
     // remaining letter stats, relative to preceding 2 letters
     let digram = l1 + l2;
     for (let j = 2, strlen = word.length; j < strlen; j++) {
+        let digramTotals;
+        l2 = digram.charAt(1);
         const l3 = word.charAt(j);
         if (j < strlen - 2) {
             totals = stats.letters[digram];
+            digramTotals = stats.letters[l2];
             if (!totals) {
                 stats.letters[digram] = totals = { total: 0 };
             }
+            if (!digramTotals) {
+                stats.letters[l2] = digramTotals = { total: 0 };
+            }
         } else if (j < strlen - 1) {
             totals = stats.penultimateLetters[digram];
+            digramTotals = stats.penultimateLetters[l2];
             if (!totals) {
                 stats.penultimateLetters[digram] = totals = { total: 0 };
             }
+            if (!digramTotals) {
+                stats.penultimateLetters[l2] = digramTotals = { total: 0 };
+            }
         } else {
             totals = stats.lastLetters[digram];
+            digramTotals = stats.lastLetters[l2];
             if (!totals) {
                 stats.lastLetters[digram] = totals = { total: 0 };
+            }
+            if (!digramTotals) {
+                stats.lastLetters[l2] = digramTotals = { total: 0 };
             }
         }
 
         countLetter(totals as LetterCount, l3);
+        countLetter(digramTotals as LetterCount, l3);
         digram = digram.charAt(1) + l3;
     }
 }
